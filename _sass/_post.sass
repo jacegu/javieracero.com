@@ -1,0 +1,77 @@
+#post
+  .header
+    padding: 3rem 0
+    h1
+      margin-bottom: 2em
+      line-height: 1
+    figure
+      text-align: left
+      img
+        width: 100%
+
+      @include media-desktop
+        max-width: 78%
+
+  .meta
+    font-family: "PT Serif"
+    font-size: 1rem
+    font-style: italic
+    text-align: left
+    line-height: 1.3
+
+    @include media-desktop
+      float: right
+      width: 20%
+    @include media-tablet
+      float: right
+      width: 17%
+      margin-left: 2%
+    @include media-mobile
+      display: none
+
+  .content
+    @include media-desktop
+      width: 73%
+      padding-right: 5%
+      border-right: 1px solid $border-color
+    @include media-tablet
+      width: 76%
+      padding-right: 5%
+      border-right: 1px solid $border-color
+    @include media-mobile
+      width: 100%
+
+    img
+      width: 100%
+
+  .title
+    font-family: "PT Serif"
+    font-size: 2.7rem
+    line-height: 2.7
+    text-align: center
+
+  .description
+    font-family: "PT Serif"
+    font-size: 1.4rem
+    font-style: italic
+    line-height: 1.5
+    margin-bottom: 50px
+
+  .footnotes
+    margin-top: 2rem
+    padding: 1rem
+    background: darken($background, 3%)
+
+    hr
+      display: none
+    ol
+      margin: 1rem
+    p
+      margin-bottom: 0.5rem
+
+
+
+  .vimeo
+    width: 95%
+    height: 23em
+    margin-bottom: 1em

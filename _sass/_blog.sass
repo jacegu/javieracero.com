@@ -1,0 +1,111 @@
+.recent-posts
+  li
+    min-width: 150px
+    margin-bottom: 1rem
+
+    .post-image
+      margin-bottom: 1rem
+
+    @include media-desktop
+      width: 23%
+      margin-right: 2%
+      &:first-child
+        width: 48%
+        .post-image
+          height: 320px
+          line-height: 320px
+      &:last-child
+        margin-right: 0
+
+      .post-image
+        width: 100%
+        height: 200px
+        line-height: 200px
+        font-size: 8rem
+        margin-bottom: 1rem
+
+    @include media-tablet
+      width: 100%
+      margin-right: 0
+      padding: 1rem 0
+      border-bottom: 1px solid $border-color
+      &:last-child
+        padding-bottom: 0
+        border-bottom: 0
+
+      .post-image
+        float: left
+        margin-right: 1rem
+        width: 45%
+        height: 180px
+        line-height: 180px
+        font-size: 6rem
+
+    @include media-mobile
+      width: 100%
+      margin-right: 0
+      padding: 2rem 0
+      border-bottom: 1px solid $border-color
+      &:last-child
+        padding-bottom: 0
+        border-bottom: 0
+
+      .post-image
+        width: 100%
+        height: 170px
+        line-height: 170px
+        font-size: 5rem
+
+#blog
+  h2
+    font-family: "Heebo"
+    font-weight: 300
+    font-size: 1rem
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 2rem
+
+  #old-posts
+    margin-top: 5em
+    padding-top: 5em
+    border-top: 1px solid $border-color
+
+    p
+      margin: 0
+
+    li
+      padding: 2rem 0
+      border-bottom: 1px solid $border-color
+      clear: both
+      &:last-child
+        border-bottom: none
+      .post-image
+        float: left
+        margin: 0 1rem 1rem 0
+
+      @include media-desktop
+        width: 70%
+        min-width: 700px
+        min-height: 110px
+
+        .post-image
+          width: 160px
+          height: 110px
+          line-height: 110px
+          font-size: 3em
+
+      @include media-tablet
+        width: 100%
+        min-height: 120px
+
+        .post-image
+          width: 180px
+          height: 120px
+          line-height: 120px
+          font-size: 5rem
+
+      @include media-mobile
+        width: 100%
+
+        .post-image
+          display: none

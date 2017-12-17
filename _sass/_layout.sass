@@ -1,0 +1,137 @@
+$desktop-max-width:  1140px
+$tablet-max-width:   769px
+$mobile-max-width:   480px
+
+@mixin media-desktop
+  @media (min-width: $tablet-max-width)
+    @content
+
+@mixin media-tablet
+  @media (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+    @content
+
+@mixin media-mobile
+  @media (max-width: $mobile-max-width)
+    @content
+
+
+@mixin container
+  margin: 0 auto
+
+  @include media-desktop
+    width: 90%
+    max-width: $desktop-max-width
+
+  @media (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+    width: 90%
+    max-width: $tablet-max-width
+
+  @media (max-width: $mobile-max-width)
+    width: 90%
+    max-width: $mobile-max-width
+
+
+.post-list
+  padding: 0
+  list-style: none
+
+  li
+    display: inline-block
+    box-sizing: border-box
+    vertical-align: top
+
+.post
+  a:first-child
+    text-decoration: none
+    &:hover
+      text-decoration: none
+
+  .post-image
+    display: block
+    color: white
+    width: 100%
+    height: 200px
+    margin-bottom: 1rem
+    margin-right: 1rem
+    background: $foreground
+    background-size: cover
+    background-position: 50% 50%
+    font-family: "PT Serif"
+    text-align: center
+
+  .title
+    line-height: 1.5
+    margin-bottom: .5rem
+
+  .date
+    font-family: "Heebo"
+    font-weight: 300
+    font-size: .8rem
+    text-transform: uppercase
+
+body > header
+  @include container
+  padding: 10px 0
+  border-bottom: 1px solid $border-color
+  margin-bottom: 5rem
+  line-height: 0px
+  text-align: center
+
+  .avatar
+    margin: 0
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    opacity: .8
+
+body > .main
+  @include container
+
+body > footer
+  @include container
+  box-sizing: border-box
+  margin-top: 5rem
+  margin-bottom: 5rem
+  padding: 1rem .5rem 0
+  color: darken($background, 40%)
+  font-family: "Heebo"
+  font-size: 1rem
+  font-weight: 300
+  text-transform: uppercase
+  border-top: 1px solid $border-color
+
+  .copyright
+    float: left
+    width: 30%
+
+  .navigation
+    display: inline-block
+    width: 40%
+    margin: 0 auto
+    text-align: center
+    ul
+      list-style: none
+      li
+        display: inline
+        margin: 0 2px
+
+  .social
+    float: right
+    width: 30%
+    text-align: right
+    a, a:hover
+      text-decoration: none
+    i
+      color: $border-color
+      font-size: 1.5rem
+      margin-left: 5px
+
+  @include media-mobile
+    .copyright
+      float: left
+      width: 50%
+    .navigation
+      width: 100%
+    .social
+      float: right
+      width: 50%

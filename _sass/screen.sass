@@ -1,0 +1,141 @@
+@charset 'utf-8'
+@import 'reset'
+
+$foreground:         rgba(0,0,0,.9)
+$background:         #ffffff
+$border-color:       darken($background, 12%)
+$action:             #7427bd
+
+$base-font-size:       19px
+$base-line-height:     27px
+
+$serif:  'Karma', serif
+$sans:   'Lato', sans-serif
+
+
+body
+  color: $foreground
+  background: $background
+  font-family: "Karma", serif
+  font-size: $base-font-size
+  font-weight: 400
+  line-height: $base-line-height
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+
+h1
+  font-family: "PT Serif"
+  font-size: 2.5rem
+  font-weight: 400
+  line-height: 2.5
+
+h2
+  font-family: "PT Serif"
+  font-size: 1.7rem
+  font-weight: 700
+  line-height: 2.5
+
+h3
+  font-family: "PT Serif"
+  font-size: 1.2rem
+  font-weight: 700
+  line-height: 2.5
+
+h4, h5, h6
+  font-family: "PT Serif"
+  font-size: 1em
+  font-weight: 400
+  line-height: 2.5
+
+h1,h2,h3,h4,h5,h6
+  a
+    color: $foreground !important
+    &:hover
+      text-decoration: none !important
+
+
+p
+  margin-bottom: 1rem
+
+
+em
+  font-style: italic
+
+
+strong
+  font-weight: 600
+
+
+a, a:link, a:active
+  color: $action
+  text-decoration: none
+  cursor: pointer
+  &:visited
+    color: darken($action, 4%)
+  &:hover
+    text-decoration: underline
+
+
+ul, ol
+  margin-bottom: 1rem
+ul
+  list-style-type: circle
+  padding-left: 20px
+ol
+  list-style-type: decimal
+  padding-left: 18px
+li
+  padding-left: 5px
+
+
+sup
+  margin: 0 1px
+  font-weight: 600
+  line-height: 1em
+  vertical-align: super
+
+
+code
+  color: $foreground
+  background: darken($background, 3%)
+  border: 1px solid $border-color
+  font-family: monaco
+  font-size: 1rem
+  font-weight: 400
+  white-space: nowrap
+
+
+pre
+  display: block
+  margin-bottom: 1rem
+  padding: .7rem 1rem
+  color: lighten($foreground, 10%)
+  background: darken($background, 3%)
+  border: 1px solid $border-color
+  overflow: auto
+  code
+    line-height: 1.4rem !important
+    white-space: inherit
+
+
+blockquote
+  border-left: 1px solid $border-color
+  font-family: "PT Serif"
+  font-style: italic
+  padding-left: 1rem
+  margin: 0 0 1.5rem 2px
+  cite
+    display: block
+    font-size: .9em
+    text-align: right
+    line-height: 1
+    &:before
+      content: "- "
+
+@import 'layout'
+@import 'home'
+@import 'blog'
+@import 'post'
+@import 'code'
+
