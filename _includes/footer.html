@@ -1,46 +1,21 @@
-<footer class="site-footer">
+<footer>
 
-  <div class="wrapper">
+  <nav class="navigation">
+    <ul>
+      <li><a href="{{ site.url }}" alt="About">About</a></li>
+      <li><a href="/blog" alt="Blog">Blog</a></li>
+      <li><a href="#" alt="Top" onclick="javascript:$('html').animate({scrollTop: 0}, 500)">Top</a></li>
+    </ul>
+  </nav>
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+  <div class="copyright">
+    <span>&copy; Javier Acero {{ 'now' | date: "%Y" }}</span>
+  </div>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
-
+  <div class="social">
+    <a href="https://twitter.com/jacegu" title="Javier Acero on Twitter"><i class="fa fa-twitter"></i></a>
+    <a href="https://github.com/jacegu" title="Javier Acero on GitHub"><i class="fa fa-github"></i></a>
+    <a href="https://instagram.com/jacegu" title="Javier Acero on Instagram"><i class="fa fa-instagram"></i></a>
   </div>
 
 </footer>
