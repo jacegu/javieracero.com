@@ -19,6 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   About Javier Acero
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://javieracero.com" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: "/blog/:slug/"
 twitter_username: jacegu
 github_username:  jacegu
 google_analytics: "UA-22797253-1"

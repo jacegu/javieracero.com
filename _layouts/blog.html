@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<section id="blog">
+
+  <section id="new-posts">
+    <h2>Things I have written recently</h2>
+    <ul class="post-list recent-posts">
+      {% for post in site.posts limit: 3 %}
+        <li>
+          <article class="post">
+            <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+              {% if post.picture %}
+                <span class="post-image" style="background-image: url('{{ post.picture }}')"></span>
+              {% else %}
+                <span class="post-image">{{ post.title | slice: 0,1 }}</span>
+              {% endif %}
+            </a>
+
+            <h3 class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="description">{{ post.excerpt }}</p>
+            <span class="date">{{ post.date | date: "%B %Y" }}</span>
+          </article>
+        </li>
+      {% endfor %}
+  </section>
+
+  <section id="old-posts">
+    <h2>Things I wrote some time ago</h2>
+    <ul class="post-list">
+      {% for post in site.posts offset: 3 %}
+        <li>
+          <article class="post">
+            <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+              {% if post.picture %}
+                <span class="post-image" style="background-image: url('{{ post.picture }}')"></span>
+              {% else %}
+                <span class="post-image">{{ post.title | slice: 0,1 }}</span>
+              {% endif %}
+            </a>
+
+            <h3 class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="description">{{ post.excerpt }}</p>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</section>
