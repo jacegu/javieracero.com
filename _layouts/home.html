@@ -2,25 +2,151 @@
 layout: default
 ---
 
-<div class="home">
+<section id="home">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
+  <section class="pitch">
+    <span class="photo"></span>
+    <div class="blur"></div>
+    <aside class="text">
+      <p>Hi there!</p>
+      <p>My name is Javier Acero. I'm a software engineer.</p>
+      <p>I collaborate with people and companies to solve problems using software. I write programs that are reliable, easy to change and as defect free as possible.</p> 
+      <a href="mailto:j4cegu@gmail.com?Subject=Howdy">Drop me a line</a>
+    </aside>
+  </section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+  <section class="writing">
+    <h2><a href="/blog" title="Blog">Writing</a></h2>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
+    <ul class="post-list recent-posts">
+      {% for post in site.posts limit: 3 %}
+        <li>
+          <article class="post">
+            <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+              {% if post.picture %}
+                <span class="post-image" style="background-image: url('{{ post.picture }}')"></span>
+              {% else %}
+                <span class="post-image">{{ post.title | slice: 0,1 }}</span>
+              {% endif %}
+            </a>
+
+            <h3 class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="description">{{ post.excerpt }}</p>
+            <span class="date">{{ post.date | date: "%B %Y" }}</span>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <aside class="see-all">
+      <a href="/blog" title="All posts">See the {{ site.posts | size }} posts that I have written</a>
+    </aside>
+  </section>
+
+
+  <section class="speaking">
+    <h2>Speaking</h2>
+    <ul class="talks">
+
+      <li id="talk1">
+        <img src="https://s3.amazonaws.com/javieracero.com/talks/building-a-transactional-pipeline.jpg" alt="Building a Transactional Pipeline"></img>
+        <h3>Building a Transactional Pipeline</h3>
+        <p>Pamplona Software Craftsmanship 2017</p>
+        <p>
+          <i class="fa fa-photo"></i>
+          <a href="https://speakerdeck.com/jacegu/building-a-transactional-pipeline-with-tdd-and-elixir">Slides</a>
+        </p>
+        <p>
+          <i class="fa fa-youtube-play"></i>
+          <a href="https://www.youtube.com/watch?v=vQ7NUNA1ONU">Recording</a>
+        </p>
       </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      <li id="talk2">
+        <img src="https://s3.amazonaws.com/javieracero.com/talks/1919.jpg" alt="1919"></img>
+        <h3>1919</h3>
+        <p>Cylicon Valley</p>
+        <p>
+          <i class="fa fa-photo"></i>
+          <a href="https://speakerdeck.com/jacegu/1919">Slides</a>
+        </p>
+        <p>
+          <i class="fa fa-youtube-play"></i>
+          <a href="https://www.youtube.com/watch?v=_qYZX_YUsYw">Recording</a>
+        </p>
+      </li>
 
-</div>
+      <li id="talk3">
+        <img src="https://s3.amazonaws.com/javieracero.com/talks/arquitectura-y-agilismo.jpg" alt="Arquitectura y Agilismo"></img>
+        <h3>Arquitectura y Agilismo</h3>
+        <p>Conferencia Agile Spain 2013</p>
+        <p>
+          <i class="fa fa-photo"></i>
+          <a href="https://speakerdeck.com/jacegu/arquitectura-y-agilismo">Slides</a>
+        </p>
+        <p>
+          <i class="fa fa-youtube-play"></i>
+          <a href="https://www.youtube.com/watch?v=6TU-Bgf1Gxk">Recording</a>
+        </p>
+      </li>
+
+      <li id="talk4">
+        <img src="https://s3.amazonaws.com/javieracero.com/talks/my-domain-is-mine.jpg" alt="My domain is mine"></img>
+        <h3>My domain is mine</h3>
+        <p>Madrid Ruby Users Group</p>
+        <p>
+          <i class="fa fa-photo"></i>
+          <a href="https://speakerdeck.com/jacegu/my-domain-is-mine-and-i-dont-share-it">Slides</a>
+        </p>
+        <p>
+          <i class="fa fa-youtube-play"></i>
+          <a href="https://vimeo.com/69157481">Recording</a>
+        </p>
+      </li>
+
+      <li id="talk5">
+        <img src="https://s3.amazonaws.com/javieracero.com/talks/zombieapps.jpg" alt="Zombieapps"></img>
+        <h3>Zombieapps</h3>
+        <p>XP Weekend 2013</p>
+        <p>
+          <i class="fa fa-photo"></i>
+          <a href="https://speakerdeck.com/jacegu/zombieapps">Slides</a>
+        </p>
+        <p>&nbsp; </p>
+      </li>
+
+      <li id="talk6">
+        <img src="https://s3.amazonaws.com/javieracero.com/talks/porque-cervantes-programaba-mejor-que-tu.jpg" alt="Porqué Cervantes progamaba mejor que tú"></img>
+        <h3>Porqué Cervantes progamaba mejor que tú</h3>
+        <p>Conferencia Agile Spain 2011</p>
+        <p>
+          <i class="fa fa-photo"></i>
+          <a href="https://es.slideshare.net/jacegu/por-qu-cervantes-programaba-mejor-que-t">Slides</a>
+        </p>
+        <p>
+          <i class="fa fa-youtube-play"></i>
+          <a href="https://vimeo.com/34459261">Recording</a>
+        </p>
+      </li>
+
+    </ul>
+
+    <ul class="talk-pager">
+      <script>
+        function scrollToTalk(index) {
+          var width = $('#talk'+(index-1)).width();
+          var margin = 42;
+          $('.talks').animate({scrollLeft: (width+margin)*(index-1)}, 500);
+        }
+      </script>
+      {% for i in (1..6) %}
+        <li><span onclick="javascript:scrollToTalk({{ i }})">&#9679;</span></li>
+      {% endfor %}
+    </ul>
+
+
+
+    <!--
+-->
+
+</section>
