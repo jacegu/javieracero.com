@@ -1,25 +1,28 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
+<article id="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="header">
+    <h1 class="title" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    {% if page.picture %}
+      <figure>
+        <img src={{ page.picture }} alt="{{ page.title | escape }}"></img>
+      </figure>
+    {% endif %}
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  <aside class="meta">
+    <span class="date">Published on {{ page.date | date: "%B %Y" }}</span>
+  </aside>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+  <section class="content">
+    <p class="description">{{ page.excerpt }}</p>
+    <div itemprop="articleBody">
+      {{ content }}
+    </div>
+  </section>
+
 </article>
