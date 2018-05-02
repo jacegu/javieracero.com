@@ -62,7 +62,7 @@ request3.callback do |response|
   puts response3.body
 end</code></pre>
 
-The output of this code can't be predicted. You won't know which response will arrive first so you can't know the order in which callbacks will be run either. The responses can arrive in any order. It can be `response1` the one that comes first but it could also be `response2` or `response3`. It does nothing to do whit the flow of the code nor the order in which the requests were made. The callbacks will be executed asynchronously. **The only thing that remains synchronous is the execution of the code inside the callbacks**. That's the only place where the rules of the procedural world still apply.
+The output of this code can't be predicted. You won't know which response will arrive first so you can't know the order in which callbacks will be run either. The responses can arrive in any order. It can be `response1` the one that comes first but it could also be `response2` or `response3`. It has nothing to do with the flow of the code nor the order in which the requests were made. The callbacks will be executed asynchronously. **The only thing that remains synchronous is the execution of the code inside the callbacks**. That's the only place where the rules of the procedural world still apply.
 
 It will require a mind shift but you will need to start structuring your code around responding to events instead of around performing a sequence of actions. **The flow of the program depends on the flow of events not on the flow of the code**.
 

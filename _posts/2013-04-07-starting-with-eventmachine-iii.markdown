@@ -64,7 +64,7 @@ end</code></pre>
 
 
 ### Revisiting the *hello world* example
-That's all you need to know about the reactor and the event loop right now. Obviously there are a lot of subtleties on how EventMachine works but the basics are covered. This breve explanation will make a huge difference when you try to understand how the library primitives work out.
+That's all you need to know about the reactor and the event loop right now. Obviously there are a lot of subtleties on how EventMachine works but the basics are covered. This brief explanation will make a huge difference when you try to understand how the library primitives work out.
 
 In fact, it will already pay of. With our current level of understanding of how EventMachine works we can explain the behaviour of the second version of our *hello world* application. Let me refresh your memory:
 
