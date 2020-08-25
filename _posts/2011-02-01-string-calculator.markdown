@@ -13,7 +13,7 @@ A few weeks ago the <a href="http://www.12meses12katas.com/">_12 meses 12 katas_
 
 This month the selected kata was <a href="http://www.osherove.com/tdd-kata-1/">string calculator</a>. I've practiced it as much as I could considering that I had some exams to study for. And here is the result. Hope you enjoy it.
 
-<iframe src="http://player.vimeo.com/video/19357601" frameborder="0" class="vimeo">&nbsp;</iframe>
+<iframe src="https://player.vimeo.com/video/19357601" frameborder="0" class="vimeo">&nbsp;</iframe>
 
 You can check the source code on GitHub (as soon as I upload it this evening).
 
