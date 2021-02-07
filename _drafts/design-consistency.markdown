@@ -28,7 +28,7 @@ In theory, your entire system follows the same structure. That should come with 
 * The structure of new features should be known, even before working on them.
 * It should be rather simple to introduce engineers to the system.
 * Engineers can walk away from the codebase, and come back knowing what to expect.
-* Design efforts should be minimised by the patterns and restrictions.
+* New feature costs should be minimised by the patterns and restrictions.
 
 
 ## Problems
@@ -44,7 +44,7 @@ The features on the left tail of the distribution suffer from over engineering. 
 
 ### Under-engineering
 
-The features on the right tail of the distribution tend to be the most problematic of all. Frequently the complexity of the problem to tackle outgrows the prescribed patterns. Bloated abstractions are a frequent indicator that tends to absorb bugs and burden maintainability.
+The features on the right tail of the distribution tend to be the most problematic of all. Frequently the complexity of the problem to tackle outgrows the prescribed patterns. Bloated abstractions are a frequent indicator that tends to be the source of bugs and burden maintainability.
 
 ![Complexity-vs-Feature-Count-Distribution-Right-Tail](https://s3.amazonaws.com/javieracero.com/consistent-design-feature-count-vs-comlexity-3.png)
 
@@ -61,6 +61,6 @@ As the feature count grows, it is bound to happen that the initially defined con
 
 The colossal problem is that keeping the consistency requires a tremendous effort from the organization. The features that are suffering issues have to be updated. But, on top of that, every other feature in the system needs to evolve. It doesn't matter if it has been working flawlessly and hasn't required any maintenance in years.
 
-Facing the level of effort this enterprise will require most companies will surrender to the original design. Issues will be patched, or even worse, overlooked. Bugs will start to pile up. Time to market and development costs of new features will grow. Engineers will be frustrated.
+Facing the level of effort this enterprise will require, most companies will surrender to the original design. Design problems will be worked around, or even worse, overlooked. Bugs will start to pile up. Time to market and development costs of new features will grow. Engineers will burn out dealing with repetitive issues, not able to tackle the root problems without breaking the consistency of the design. Many will end up leaving the company in frustration.
 
 All of it sacrificed in the altar of consistency...
