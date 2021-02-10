@@ -85,7 +85,7 @@ In order to make sure the architecture exhibits these qualities as it evolves yo
 
 It is imperative to allow for incremental changes to happen, adapting to increasing complexity. These may or may not cross-pollinate between subsets of the system when needed, without explicitly enforcing it.
 
-A small set of building blocks, patterns and restrictions are OK to begin with, but always take them with a grain of salt. Be flexible and allow for rules to be broken. That's were innovation starts.
+A small set of building blocks, patterns and restrictions are OK to begin with, but always take them with a grain of salt. Be flexible and allow for rules to be broken. That is were innovation starts.
 
 
 
