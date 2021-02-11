@@ -66,7 +66,7 @@ The time to evolve the design has come.
 
 The colossal problem is that keeping consistency requires a tremendous effort from the organization. The parts of the system that are suffering issues have to be updated. On top of that, every other feature in the application needs to evolve as the building blocks are refined. It doesn't matter if it has been working flawlessly and hasn't required any maintenance in years.
 
-Facing the level of effort this enterprise will require, most companies will surrender to the original design. Design problems will be worked around, or even worse, overlooked. Bugs will start to pile up. Time to market and development costs of new features will grow. Engineers will burn out dealing with repetitive issues, not able to tackle the root problems without breaking the consistency of the design.
+Facing the level of effort this enterprise will require, most companies will surrender to the original recipe. Design problems will be worked around, or even worse, overlooked. Bugs will start to pile up. Time to market and development costs of new features will grow. Engineers will burn out dealing with repetitive issues, not able to tackle the root problems without breaking the consistency of the design.
 
 
 ## A better approach to consistency
@@ -84,4 +84,4 @@ To make sure the architecture exhibits these qualities as it evolves you can def
 
 It is imperative to allow for incremental changes to happen, adapting to increasing complexity. These may or may not cross-pollinate between subsets of the system when needed, without explicitly enforcing it.
 
-A small set of building blocks, patterns and restrictions are OK, to begin with, but always take them with a grain of salt. Be flexible and allow for rules to be broken. That's were innovation starts.
+A small set of loosely defined building blocks, patterns and restrictions are OK, to begin with, but always take them with a grain of salt. Be flexible and allow for rules to be broken. That's were innovation starts.
