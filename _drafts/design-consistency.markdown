@@ -8,30 +8,30 @@ layout: post
 
 Consistency is usually a quality desired in the design of any system. Unfortunately it means different things depending on who you talk to. It is frequently interpreted as using a small set of reusable building blocks.
 
-The promise _"Design By Building Blocks"_ makes is that one will come up with a design that suits all features of your application. This design will be the [silver bullet](https://en.wikipedia.org/wiki/Silver_bullet) one can refer to when adding any feature to the system. It will also become the standard by which you judge the architecture of any part of your product.
+The promise _"Design By Building Blocks"_ makes is that one will come up with a design that suits all features of your application. This design will be the [silver bullet](https://en.wikipedia.org/wiki/Silver_bullet) one can refer to when adding any functionality to the application. It will also become the standard by which you judge the architecture of any part of your product.
 
 In most cases this "recipe" comes in the form of a prescribed set of layers, with a side of patterns and restrictions on how these layers communicate with each other. Base abstractions are also a frequent ingredient.
 
 
 ## Tackling the median complexity
 
-Any modern application today will provide dozens of features to its users. Even an MVP in a private beta will include a handful of them. Each feature will have its level of complexity. In a well-designed system, the software's complexity will reflect the complexity of the features it provides.
+Any modern application today will provide dozens of features to its users. Even an MVP in a private beta will include a handful of them. Each one will have its level of complexity. In a well-designed system, the software's complexity will reflect the complexity of the functionality it provides.
 
-At any given time a software product will be composed of a few simple features, several average-complexity features, and a small number of very complex ones. The distribution of feature complexity will likely resemble a normal one:
+At any given time a software product will be composed of a few simple features, several average-complexity features, and a small number of very complex ones. The distribution of the complexity will likely resemble a normal one:
 
 ![Complexity-vs-Feature-Count-Distribution](https://s3.amazonaws.com/javieracero.com/consistent-design-feature-count-vs-comlexity-1.png)
 
-To find the target design, one focuses on the features that are close to the median-complexity. That guarantees that we are considering the most significant chunk of the system possible. We look into the commonalities these features have and infer the patterns and restrictions from them.
+To find the target design, one focuses on the features that are close to the median-complexity. That guarantees that we are considering the most significant chunk of the system possible. We look into the commonalities these pieces have and infer the patterns and restrictions from them.
 
 
 ## Advantages
 
 In theory, your entire system follows the same architecture. This comes with a few perks:
 * The structure of new features should be known, even before working on them.
-* It should be relatively simple to introduce engineers to the system.
+* It should be relatively simple to introduce engineers to the codebase.
 * Engineers can walk away from the codebase, and come back knowing what to expect.
 * Maintenance costs should be minimized by the patterns and restrictions.
-* The costs of introducing new features should be close to linear.
+* The costs of introducing new functionalities should be close to linear.
 
 
 ## Problems
@@ -40,7 +40,7 @@ While the promise of a sliver bullet is tempting, one should be aware of the dan
 
 ### Over-engineering
 
-The features on the left tail of the distribution suffer from over-engineering. The simpler the feature, the bigger the problem is. Boilerplate code and excessive indirection are some of the expected symptoms. These usually complicate the features' maintainability making the them harder to understand and evolve.
+The features on the left tail of the distribution suffer from over-engineering. The simpler the logic, the bigger the problem is. Boilerplate code and excessive indirection are some of the expected symptoms. These usually complicate the maintainability, making the application harder to understand and evolve.
 
 ![Complexity-vs-Feature-Count-Distribution-Left-Tail](https://s3.amazonaws.com/javieracero.com/consistent-design-feature-count-vs-comlexity-2.png)
 
@@ -49,7 +49,7 @@ The features on the left tail of the distribution suffer from over-engineering. 
 
 The features on the right tail of the distribution tend to be the most problematic of all. Frequently the complexity of the problem to tackle outgrows the prescribed patterns. Bloated abstractions are a frequent indicator that tends to be the source of bugs and burden maintainability.
 
-It is also very frequent that these features end up being where the consistency breaks. The bloated abstractions are overflown by complexity and engineers refactor it away, ignoring the predefined set of building blocks. Usually, the organization overlooks this situation and believes that consistency is still in place.
+It is also very frequent that these components end up being where the consistency breaks. The bloated abstractions are overflown by complexity and engineers refactor it away, ignoring the predefined set of building blocks. Usually, the organization overlooks this situation and believes that consistency is still in place.
 
 ![Complexity-vs-Feature-Count-Distribution-Right-Tail](https://s3.amazonaws.com/javieracero.com/consistent-design-feature-count-vs-comlexity-3.png)
 
@@ -64,7 +64,7 @@ As the feature count grows, it is bound to happen that the initially defined con
 
 The time to evolve the design has come.
 
-The colossal problem is that keeping consistency requires a tremendous effort from the organization. The features that are suffering issues have to be updated. On top of that, every other feature in the system needs to evolve as the building blocks are refined. It doesn't matter if it has been working flawlessly and hasn't required any maintenance in years.
+The colossal problem is that keeping consistency requires a tremendous effort from the organization. The parts of the system that are suffering issues have to be updated. On top of that, every other feature in the application needs to evolve as the building blocks are refined. It doesn't matter if it has been working flawlessly and hasn't required any maintenance in years.
 
 Facing the level of effort this enterprise will require, most companies will surrender to the original design. Design problems will be worked around, or even worse, overlooked. Bugs will start to pile up. Time to market and development costs of new features will grow. Engineers will burn out dealing with repetitive issues, not able to tackle the root problems without breaking the consistency of the design.
 
