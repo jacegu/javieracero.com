@@ -19,3 +19,7 @@ gem "kramdown-parser-gfm"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
 end
+
+group :development do
+  gem "webrick"
+end
